@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <title>Yummy</title>
+  </head>
+  <body class="bg-black">
+    <section class="loader-container">
+      <span class="loader"></span>
+    </section>
+    <nav class="navbar-ed z-3">
+      <div class="" id="menu-bar">
+        <div
+          id="menu-bar"
+          class="bg-black h-100 p-4 d-flex flex-column justify-content-between"
+        >
+          <div class="overflow-hidden">
+            <ul class="list-unstyled translate-anemat">
+              <li class="py-2">
+                <a class="text-white text-decoration-none" href="#">Search</a>
+              </li>
+              <li class="py-2">
+                <a class="text-white text-decoration-none" href="#"
+                  >Categories</a
+                >
+              </li>
+              <li class="py-2">
+                <a class="text-white text-decoration-none" href="#">Area</a>
+              </li>
+              <li class="py-2">
+                <a class="text-white text-decoration-none" href="#"
+                  >Ingredients</a
+                >
+              </li>
+              <li class="py-2">
+                <a class="text-white text-decoration-none" href="#"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="list-unstyled d-flex gap-2">
+              <li>
+                <a class="text-white text-decoration-none" href="#"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#"
+                  ><i class="fa-solid fa-globe"></i
+                ></a>
+              </li>
+            </ul>
+            <div>
+              <p class="text-white">Copyright Â© 2019 All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul
+        id="look-menu"
+        class="navbar bg-white d-flex list-unstyled justify-content-between align-content-between flex-column p-2 mb-0"
+      >
+        <li><img src="image/logo.png" alt="logo" class="logo" /></li>
+        <li
+          id="open-menu"
+          class="d-flex justify-content-between align-items-center flex-column"
+        >
+          <i id="icontransfer" class="bi bi-list fs-1"></i>
+        </li>
+        <li
+          class="d-flex justify-content-between align-items-center flex-column"
+        >
+          <i class="bi bi-globe fs-3"></i> <i class="bi bi-share fs-3"></i>
+        </li>
+      </ul>
+    </nav>
+    <div class="body overflow-x-hidden">
+      <div class="container mt-5 mb-3">
+        <div id="table-body" class="row g-3"></div>
+        <div id="table-search" class="page text-white d-none">
+          <div class="input-two row g-3">
+            <div class="input-one col-6">
+              <input
+                type="text"
+                name=""
+                id="py_name_search"
+                class="m-2 form-control"
+                placeholder="Search py Name"
+              />
+            </div>
+            <div class="input-one col-6">
+              <input
+                type="text"
+                name=""
+                id="py_letter_search"
+                class="m-2 form-control"
+                placeholder="Search py letter"
+                maxlength="1"
+              />
+            </div>
+          </div>
+          <div id="table_search_body" class="row g-3 mt-3"></div>
+        </div>
+        <div id="table-categories" class="page row g-3 d-none"></div>
+        <div id="table-area" class="page row g-3 d-none"></div>
+
+        <div id="table-ingredients" class="page row g-3 d-none"></div>
+        <div
+          id="table-Contact"
+          class="page row g-3 justify-content-center d-none"
+        >
+          <div class="col-md-6">
+            <input
+              id="nameInput"
+              onkeyup="inputsValidation()"
+              type="text"
+              class="form-control"
+              placeholder="Enter Your Name"
+            />
+            <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+              Special characters and numbers not allowed
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input
+              id="emailInput"
+              onkeyup="inputsValidation()"
+              type="email"
+              class="form-control"
+              placeholder="Enter Your Email"
+            />
+            <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+              Email not valid *exemple@yyy.zzz
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input
+              id="phoneInput"
+              onkeyup="inputsValidation()"
+              type="text"
+              class="form-control"
+              placeholder="Enter Your Phone"
+            />
+            <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+              Enter valid Phone Number
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input
+              id="ageInput"
+              onkeyup="inputsValidation()"
+              type="number"
+              class="form-control"
+              placeholder="Enter Your Age"
+            />
+            <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+              Enter valid age
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input
+              id="passwordInput"
+              onkeyup="inputsValidation()"
+              type="password"
+              class="form-control"
+              placeholder="Enter Your Password"
+            />
+            <div
+              id="passwordAlert"
+              class="alert alert-danger w-100 mt-2 d-none"
+            >
+              Enter valid password *Minimum eight characters, at least one
+              letter and one number:*
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input
+              id="repasswordInput"
+              onkeyup="inputsValidation()"
+              type="password"
+              class="form-control"
+              placeholder="Repassword"
+            />
+            <div
+              id="repasswordAlert"
+              class="alert alert-danger w-100 mt-2 d-none"
+            >
+              Enter valid repassword
+            </div>
+          </div>
+          <button
+            id="submitBtn"
+            disabled=""
+            class="btn btn-outline-danger px-2 mt-3 fit-content"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
